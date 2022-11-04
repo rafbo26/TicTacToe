@@ -19,7 +19,7 @@ function main() {
             
             newDiv.classList.add(turn); 
             evt.currentTarget.appendChild(newDiv);
-            turn === 'cross' ? 'circle' : 'cross';
+            turn = turn === 'cross' ? 'circle' : 'cross';
         }
         
     }
