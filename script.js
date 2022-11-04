@@ -1,8 +1,20 @@
-test();
-
-
-function test() {
+function main() {
     const plansza = document.getElementById('plansza');
-    plansza.innerHTML = "Hello world"
-  }
-  
+    const poleArr = document.getElementsByClassName('pole')
+    
+    const newDiv = document.createElement("div");
+
+    newDiv.classList.add('circle');
+    
+}
+
+
+
+
+
+
+
+
+
+
+main();
