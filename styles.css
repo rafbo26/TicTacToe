@@ -14,7 +14,7 @@
 
 }
 
-.pole {
+.empty {
     background: #ADD8E6;
     border-radius: 20px;
     width: 100px;
@@ -22,9 +22,18 @@
 
 }
 
-.pole:hover {
+.empty:hover {
     background: #7a96a0;
 }
+
+.taken {
+    background: #ADD8E6;
+    border-radius: 20px;
+    width: 100px;
+    height: 100px;
+
+}
+
 
 .circle {
     height: 50px;
@@ -39,14 +48,14 @@
 }
 
 
-#cross {
+.cross {
     background: rgb(0, 0, 0);
     height: 100px;
     position: relative;
     width: 20px;
   }
 
-#cross:after {
+.cross:after {
     background: rgb(0, 0, 0);
     content: "";
     height: 20px;
