@@ -1,16 +1,25 @@
 #plansza {
     display: grid;
-    gap: 5px;
+    gap: 10px;
     grid-template-columns: repeat(3, 100px);
-    width: 350px;
-    height: 350px;
-    border: 1px;
-    border-color: black;
+    width: 320px;
+    height: 320px;
+
+    padding: 10px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
 }
 
 .pole {
-    width: 100px;
-    height: 100px;
-    border-color: black;
-    border: 1px;
+    background: #ADD8E6;
+    border-radius: 20px;
+
+}
+
+.pole:hover {
+    background: #7a96a0;
 }
