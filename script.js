@@ -25,12 +25,14 @@ function main() {
             
             gameOver = checkForWin();
 
+            if (gameOver) {
+                const msg = document.getElementById('msg');
+                msg.innerHTML = turn + ' wins';
+            }
+
             turn = turn === 'cross' ? 'circle' : 'cross';
 
-        } else if (gameOver) {
-            const msg = document.getElementById('msg');
-            msg.innerHTML = turn + ' wins';
-        }
+        } 
         
     }
 
@@ -42,10 +44,10 @@ function main() {
             [game[0], game[3], game[6]],
             [game[1], game[4], game[7]],
             [game[2], game[5], game[8]],
-            [game[0], game[4], game[5]],
+            [game[0], game[4], game[8]],
             [game[2], game[4], game[6]]
         ];
-        isWin = false;
+        let isWin = false;
         combinations.forEach(comb => {
             let sum = comb.reduce((partialSum, a) => partialSum + a, 0);
             if (sum === 3 || sum === 30) {
