@@ -3,6 +3,7 @@ function main() {
     
     const poleHTMLCollection = document.getElementsByClassName('pole')
     const poleArr = [].slice.call(poleHTMLCollection);
+    const btn = document.getElementById("playAgain");
     var game = [0,0,0,0,0,0,0,0,0];
     let combinations = [
         [0, 1, 2],
@@ -15,9 +16,11 @@ function main() {
         [2, 4, 6]
     ];
     
+    btn.addEventListener("click", resetBoard);
+
     poleArr.forEach(pole => {
-            pole.addEventListener("click", gameTurn); 
-        });
+        pole.addEventListener("click", gameTurn); 
+    });
     
     function gameTurn(evt) {
         playerTurn(evt.currentTarget);
@@ -92,7 +95,6 @@ function main() {
     
     function gameOver(winner) {
         let msg = document.getElementById('msg');
-        console.log(winner + ' wins!');
         msg.innerHTML = winner + ' wins!';
         
         poleArr.forEach(pole => {
@@ -106,6 +108,7 @@ function main() {
         const crossOrCircle = document.createElement("div");
         
         crossOrCircle.classList.add(player); 
+        crossOrCircle.classList.add('move'); 
         pole.appendChild(crossOrCircle);
         pole.classList.remove('empty');
         pole.classList.add('taken');
@@ -122,7 +125,24 @@ function main() {
         return isWin;
     }
 
-
+    function resetBoard() {
+        console.log(poleArr)
+        poleArr.forEach(pole => {
+            pole.classList.remove('taken');
+            pole.classList.add('empty');
+            game = [0,0,0,0,0,0,0,0,0];
+            var child = pole.lastElementChild; 
+            while (child) {
+                pole.removeChild(child);
+                child = null;
+            }
+            let msg = document.getElementById('msg');
+        });
+        msg.innerHTML = '';
+        poleArr.forEach(pole => {
+            pole.addEventListener("click", gameTurn); 
+        });
+    }
 
 }
 

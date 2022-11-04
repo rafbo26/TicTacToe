@@ -13,7 +13,7 @@
     transform: translate(-50%, -50%);
 }
 
-#msg {
+#msg_div {
     position: absolute;
     top: 25%;
     left: 50%;
