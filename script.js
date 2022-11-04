@@ -8,12 +8,13 @@ function main() {
 
     function addCircle() {
         const newDiv = document.createElement("div");
-
+      
         newDiv.classList.add('circle');
-
+        
         poleArr[0].appendChild(newDiv);
-    }
-
+      
+        console.log("hi")
+      }
 }
 
 
