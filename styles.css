@@ -1,4 +1,10 @@
 #plansza {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, 100px);
+    width: 350px;
+    height: 350px;
+    border: 1px;
     border-color: black;
 }
 
@@ -6,5 +12,5 @@
     width: 100px;
     height: 100px;
     border-color: black;
-    margin: 5px;
+    border: 1px;
 }
